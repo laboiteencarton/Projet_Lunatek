@@ -1,0 +1,16 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    a {
+        grid-area: logo;
+       justify-self: center;
+    }
+    ul {
+        grid-area: item;
+        li .btn-light {
+            padding:1rem;
+        }
+    }
+}

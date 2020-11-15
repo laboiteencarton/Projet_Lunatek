@@ -1,0 +1,17 @@
+.title-show {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.showcase {
+display: flex;
+flex-direction: column;
+padding: 0 1rem;
+.text-primary {
+    font-size: 2rem;
+}
+.article-content,.article-author, .date{
+    font-size: 1.6rem;
+    color:var(--gray-text);
+}
+}

@@ -1,0 +1,90 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  header a {
+    grid-area: logo;
+    justify-self: center; }
+  header ul {
+    grid-area: item; }
+    header ul li .btn-light {
+      padding: 1rem; }
+
+.title-show {
+  padding: 3rem 2rem;
+  text-align: center; }
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem; }
+  .showcase .text-primary {
+    font-size: 2rem; }
+  .showcase .article-content, .showcase .article-author, .showcase .date {
+    font-size: 1.6rem;
+    color: var(--gray-text); }
+
+.btn {
+  margin: 0; }
+
+.ads {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "title" "text" "form" "btn"; }
+  .ads h3 {
+    grid-area: title; }
+  .ads p {
+    grid-area: text; }
+  .ads form {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    justify-items: center; }
+    .ads form .btn-form {
+      display: flex;
+      align-self: center;
+      text-transform: uppercase;
+      border: 0; }
+
+content {
+  align-items: center; }
+  content .item-article {
+    margin-top: 2rem;
+    padding: 2rem; }
+
+.btn-more-green {
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  font-size: 1.4rem;
+  text-transform: uppercase; }
+
+.btn-more {
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  font-size: 1.4rem;
+  text-transform: uppercase; }
+
+.popular {
+  display: none; }
+
+hr {
+  display: none; }
+
+footer {
+  margin-top: 5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column; }
+  footer .bloc-medias:first-child {
+    flex-direction: column;
+    justify-items: center;
+    align-items: center; }
+
+.category ul {
+  display: none; }

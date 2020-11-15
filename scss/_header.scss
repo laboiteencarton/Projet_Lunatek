@@ -1,0 +1,168 @@
+/* Header */
+header {
+    background-color: var(--headerback);
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 13px 0;
+    position: relative;
+    // Header > Logo
+    .logo {
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, rgba(87, 112, 255, 1) 0%, rgba(255, 106, 139, 1) 57%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    // Header > Positions Elems
+    a {
+        grid-area: logo;
+        display: block;
+
+        padding: 1rem;
+    }
+    ul {
+        grid-area: text;
+        display: flex;
+        place-items: center;
+        margin-right: 20px;
+
+        li {
+            padding: 1rem 1.5rem;
+        }
+    }
+}
+// << Header end
+
+.fixed-header {
+    background-color: var(--headerback);
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 27px 20px;
+    position: fixed;
+    display: none;
+    top: 0;
+    z-index: 9;
+    transition: 0.4s ease-in;
+    .logo {
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, rgba(87, 112, 255, 1) 0%, rgba(255, 106, 139, 1) 57%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+// Header > Nav
+// BUTTON
+.btn-navigation {
+    position: fixed;
+    right: 30px;
+    top: 25px;
+    z-index: 20;
+    cursor: pointer;
+
+    // Nav ICONS
+    .barre {
+        grid-area: hamb;
+        width: 3rem;
+        height: 0.3rem;
+        background: linear-gradient(90deg, rgba(87, 112, 255, 1) 0%, rgba(255, 106, 139, 1) 87%);
+        margin-top: 0.5rem;
+        transition: width 0.4s ease-in-out;
+    }
+    // IF CLOSE ICONS
+    .close {
+        width: 1rem;
+        height: 0.3rem;
+        background: rgba(255, 106, 139, 1);
+        margin-top: 0.5rem;
+        transition: width 0.4s ease-in-out;
+    }
+}
+
+// NAVBAR POSITION
+.navigation {
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    padding: 30px;
+    background: var(--headerback);
+    height: 100%;
+    overflow-y: auto;
+
+    transition: transform 0.4s ease-in-out;
+    -webkit-transition: transform 0.4s ease-in-out;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+
+    ul {
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            margin: 1rem auto;
+            h2 {
+                font-size: 3rem;
+                font-weight: 700;
+                padding: 1rem;
+                letter-spacing: 0.6rem;
+                text-align: center;
+                text-transform: uppercase;
+                background: linear-gradient(90deg, rgba(87, 112, 255, 1) 0%, rgba(255, 106, 139, 1) 57%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                line-height: 4rem;
+            }
+
+            a {
+                color: white;
+                font-weight: 800;
+                letter-spacing: 0.6rem;
+                text-transform: uppercase;
+                margin: 1rem 0;
+                font-size: 1.5rem;
+                position: relative;
+                border: 6px solid rgba(255, 106, 139, 1);
+                padding: 2rem;
+                overflow: hidden;
+                transition: ease-in-out 0.7s all;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 0%;
+                    height: 100%;
+                    background-color: rgba(255, 106, 139, 1);
+                    z-index: -1;
+                    transform: translate(-50%, -50%);
+                    transition: ease-in-out 0.7s all;
+                    -webkit-box-shadow: -15px 1px 42px -4px rgba(0, 0, 0, 0.35);
+                    -moz-box-shadow: -15px 1px 42px -4px rgba(0, 0, 0, 0.35);
+                    box-shadow: -15px 1px 42px -4px rgba(0, 0, 0, 0.35);
+                }
+                &:hover::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// IF OPEN ANIMATION
+.navigation.isOpen {
+    transform: translateX(0%);
+    -webkit-transform: translateY(0%);
+    -webkit-box-shadow: -15px 1px 42px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -15px 1px 42px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: -15px 1px 42px -4px rgba(0, 0, 0, 0.75);
+}

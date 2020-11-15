@@ -1,0 +1,21 @@
+hr {
+    display: none;
+}
+
+footer {
+
+    margin-top:5rem;
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    .bloc-medias:first-child {
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    }
+
+
+.category ul{
+    display:none;
+}  
